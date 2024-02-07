@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #navbar {
+            display: flex;
+            background-color: black;
+            border-radius: 20px;
+            margin: 1% 25%;
+            position: sticky;
+            top: 10px;
+            left: 10px;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        #list1 {
+            display: flex;
+            flex-direction: row;
+            padding: 12px;
+            margin: 0px;
+            flex-wrap: wrap;
+            width: 90%;
+            justify-content: center;
+        }
+
+        #list1 li {
+            padding: 0px 3%;
+            list-style: none;
+
+        }
+
+        #list1 li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.6 vw;
+
+        }
+
+        #list1 li :hover {
+            color: red;
+            text-shadow: 0px 2px 20px red, 2px 0px 20px red, -2px 0px 20px red;
+        }
+
+        #bg1::before {
+            background-image: url('  https://images.pexels.com/photos/1590549/pexels-photo-1590549.jpeg?cs=srgb&dl=pexels-irina-iriser-1590549.jpg&fm=jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            content: "";
+            width: 100%;
+            height: 2036px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+            opacity: 0.95;
+            /* background-attachment: fixed; */
+        }
+
+        @media only screen and (min-height:900px) {
+            #bg1::before {
+                height: 100vh;
+            }
+        }
+
+        .img1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .img1 img {
+            width: 36vw;
+            height: 22vw;
+            border-radius: 300px;
+            border: 2px black solid;
+            box-shadow: 0px 2px 20px white, 2px 0px 20px white, -2px 0px 20px white;
+        }
+
+        .bio1 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bio1 p {
+            padding: 1.3%;
+            border-radius: 15px;
+            width: 70%;
+            font-size: 1.40vw;
+        }
+
+        #bio {
+            border: 2px black solid;
+            background-color: rgba(214, 218, 221, 0.75);
+            box-shadow: 0px 2px 20px white, 2px 0px 20px white, -2px 0px 20px white;
+        }
+
+        #name1 {
+            width: 15vw;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 1.9vw;
+            margin-bottom: 0px;
+            text-shadow: 0px 2px 20px red, 2px 0px 20px red, -2px 0px 20px red;
+            box-shadow: 0px 2px 20px white, 2px 0px 20px white, -2px 0px 20px white;
+        }
+
+        .container2 {
+            background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTZ8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHx8fDE3MDY3ODkxODd8MA&ixlib=rb-4.0.3');
+            background-repeat: no-repeat;
+            opacity: 0.80;
+            width: 80vw;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            flex-direction: column;
+            box-shadow: 0px 2px 20px white, 2px 0px 20px white, -2px 0px 20px white;
+            border-radius: 20px;
+            border: black 2px solid;
+        }
+
+        #skill1 {
+            padding: 10px;
+            opacity: 1;
+            font-size: 1.9vw;
+            border-radius: 20px;
+            color: white;
+            text-shadow: 0px 2px 20px red, 2px 0px 20px red, -2px 0px 20px red;
+            box-shadow: 0px 2px 20px black, 2px 0px 20px black, -2px 0px 20px black;
+            margin-top: 10px;
+
+
+        }
+
+        #skill2 {
+            padding: 10px 30px;
+            opacity: 1;
+            font-size: 1.40vw;
+            color: white;
+
+        }
+
+        #project {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(240, 248, 255, 0.85);
+            width: 90vw;
+            margin: 20px auto;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0px 2px 20px black, 2px 0px 20px black, -2px 0px 20px black;
+        }
+
+        #project1 {
+            display: grid;
+            grid-template:
+                'h h p p'
+                'd d p p';
+            margin: 10px 0px;
+            border: 2px black solid;
+            border-radius: 10px;
+        }
+
+        #project2 {
+            display: grid;
+            grid-template:
+                'h h p p'
+                'd d p p';
+            margin: 10px 0px;
+            border: 2px black solid;
+            border-radius: 10px;
+        }
+
+        #project3 {
+            display: grid;
+            grid-template:
+                'h h p p'
+                'd d p p';
+            margin: 10px 0px;
+            border: 2px black solid;
+            border-radius: 10px;
+        }
+
+        .heading1 {
+            grid-area: h;
+            text-align: center;
+            font-size: 1.9vw;
+            align-self: center;
+            border-radius: 20px;
+            box-shadow: 0px 2px 20px black, 2px 0px 20px black, -2px 0px 20px black;
+            justify-self: center;
+            width: 12vw;
+        }
+
+        .details1 {
+            grid-area: d;
+            font-size: 1.4vw;
+            padding: 5px;
+        }
+
+        .pic1 {
+            grid-area: p;
+        }
+
+        .pic1 img {
+            width: 40vw;
+            border-radius: 20px;
+            box-shadow: 0px 2px 20px black, 2px 0px 20px black, -2px 0px 20px black;
+            margin: 10px;
+            height: 22vw;
+        }
+
+        @media only screen and (max-width:650px) {
+            #project1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #project2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #project3 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #navbar {
+                margin: 2% 3%;
+            }
+
+            .heading1 {
+                font-size: 2.6vh;
+                margin: 10px 0px;
+                width: 12vh;
+            }
+
+            .details1 {
+                font-size: 2.1vh;
+            }
+
+            #list1 li a {
+                font-size: 2.4vh;
+            }
+
+            #name1 {
+                font-size: 2.8vh;
+                width: 40vw;
+            }
+
+            .bio1 p {
+                width: 90vw;
+                font-size: 2.2vh;
+            }
+
+            .container2 {
+                width: 90vw;
+            }
+
+            #skill1 {
+                font-size: 2.8vh;
+            }
+
+            #skill2 {
+                font-size: 2.2vh;
+            }
+
+            .img1 img {
+                width: 60vw;
+                height: 42vw;
+            }
+
+            .pic1 img {
+                width: 60vw;
+                height: 40vw;
+            }
+            .footer{
+                font-size: 2.2vh;
+            }
+
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            font-size: 1.4vw;
+        }
+
+        #download {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #download div {
+            margin: 10px;
+        }
+
+        #contact1 li {
+            list-style: none;
+        }
+
+        #copyright {
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="bg1"></div>
+
+    <nav id="navbar">
+        <ul id="list1">
+            <li><a href="#mypic" target="_parent">BiO</a></li>
+            <li><a href="#bio">Skills</a></li>
+            <li><a href="#skill1">Projects</a></li>
+            <li><a href="#project3">Contact</a></li>
+            <li><a href="">Help</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container1">
+        <div id="mypic" class="img1">
+            <img src="https://ew.com/thmb/qaTGM2wNcPbCb_r7YthXKiXY2_k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/robert-pattinson-twilight-112023-0f11c1069098493785a62d1531461be0.jpg"
+                alt="Robert Pattionsion">
+        </div>
+        <div class="bio1">
+            <p id="name1">
+                Robert Pattionsion
+            </p>
+            <p id="bio"> BIO :-
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates laborum debitis
+                laudantium fugit vel necessitatibus libero magnam minus praesentium tempora saepe asperiores
+                repudiandae,
+                molestias labore est maxime odit, deleniti esse, excepturi assumenda nostrum minima repellat
+                exercitationem.
+                Dolore perferendis consequatur labore.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus voluptatem dignissimos quidem
+                ducimus exercitationem iste consequuntur aliquam earum molestiae consequatur! Eius animi quia odio
+                deserunt soluta voluptates culpa dolore, atque quidem fugit fuga quod earum amet laudantium voluptatum
+                quos doloremque?
+            </p>
+        </div>
+
+
+
+    </div>
+    <div class="container2">
+
+        <div id="skill1">SKiLLs</div>
+
+        <div id="skill2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente tenetur excepturi modi
+            consequuntur, quo maiores dolores autem nobis molestiae harum quod voluptatibus rem voluptas officiis
+            veritatis vitae ducimus temporibus. Quo alias, et quis laboriosam quam ipsum quae exercitationem.
+            Excepturi, fugit?</div>
+
+    </div>
+
+    <div id="project">
+        <div id="project1">
+
+            <div class="heading1">Project 1</div>
+            <div class="details1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et tempora totam quia!
+                Vero accusantium exercitationem sint odit vitae non unde accusamus fuga? Architecto obcaecati
+                corporis doloremque quibusdam ea aspernatur pariatur.</div>
+            <div class="pic1"><img
+                    src="https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg"
+                    alt="none"></div>
+        </div>
+        <div id="project2">
+
+            <div class="heading1">Project 2</div>
+            <div class="details1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea dolore incidunt dolor
+                veritatis doloribus explicabo laboriosam id nulla. Inventore fuga ratione culpa hic eveniet
+                reiciendis magni cum adipisci aut quibusdam?</div>
+            <div class="pic1"><img
+                    src="https://img.freepik.com/free-photo/abstract-blurred-multi-colored-background-generative-ai_169016-30198.jpg    "
+                    alt="none"></div>
+        </div>
+        <div id="project3">
+
+            <div class="heading1">Project 3</div>
+            <div class="details1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus illo animi
+                nihil delectus ipsa assumenda quae quisquam, harum sed consectetur voluptates ex accusantium nisi
+                dolorum aut pariatur architecto ullam corrupti?</div>
+            <div class="pic1"><img
+                    src="https://wallpapers.com/blog/wp-content/uploads/2023/06/glitter-golden-bokeh-lights-scaled.jpeg"
+                    alt="none"></div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div id="download">
+            <div>Download CV in pdf Format : </div>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, cupiditate?</div>
+        </div>
+        <div id="contact">
+            <ul id="contact1">
+                <li>Contacts</li>
+                <li>Number &#160:&#160 9012260141</li>
+                <li>E-mail &#160:&#160 Krsadars@gmail.com</li>
+            </ul>
+        </div>
+        <div id="copyright">
+            Copyright: © 2024 Adarsh Personal Profile
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
